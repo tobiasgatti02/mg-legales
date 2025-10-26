@@ -70,7 +70,7 @@ export function Navbar() {
               onClick={() => scrollToSection("contacto")}
               className="bg-accent text-accent-foreground hover:bg-accent/90"
             >
-              Consulta Gratuita
+              Contactános
             </Button>
           </div>
 
@@ -111,7 +111,7 @@ export function Navbar() {
                   onClick={() => scrollToSection("contacto")}
                   className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
                 >
-                  Consulta Gratuita
+                  Contactános
                 </Button>
               </div>
             </div>

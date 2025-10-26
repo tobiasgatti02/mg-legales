@@ -18,7 +18,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Estudio Jurídico - Amparo de Salud",
-  description: "Especialistas en amparo de salud. Defendemos tu derecho a la salud con profesionalismo y dedicación.",
+  description: "Especialistas en amparos de salud. Defendemos tu derecho a la salud con profesionalismo y dedicación.",
 }
 
 export default function RootLayout({

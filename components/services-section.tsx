@@ -24,7 +24,7 @@ const services = [
     icon: Clock,
     title: "Respuesta Inmediata",
     description:
-      "Entendemos la urgencia de los casos de salud. Brindamos atención rápida y efectiva cuando más lo necesitas.",
+      "Entendemos la urgencia de los casos de salud. Brindamos consultas personalizadas; acompañamiento y seguimiento constante",
   },
 ]
 

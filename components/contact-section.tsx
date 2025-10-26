@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { MessageCircle, Phone, Mail, MapPin } from "lucide-react"
 import { useState } from "react"
+import emailjs from '@emailjs/browser'
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -17,13 +18,40 @@ export function ContactSection() {
     message: "",
   })
 
-  const whatsappNumber = "5491112345678" // Reemplaza con tu número real
-  const whatsappMessage = encodeURIComponent("Hola, me gustaría consultar sobre amparo de salud")
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitMessage, setSubmitMessage] = useState("")
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const whatsappNumber = "5492916482826"
+  const whatsappMessage = encodeURIComponent("Hola, me gustaría obtener más información sobre sus servicios" )
+
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Aquí puedes agregar la lógica para enviar el formulario
-    console.log("Form submitted:", formData)
+    setIsSubmitting(true)
+    setSubmitMessage("")
+
+    try {
+      const serviceId = 'service_mjrvrqj'
+      const templateId = 'template_33ri52s'
+      const publicKey = 'Menb23a1jWwv5ZTp-'
+
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+        to_email: 'estudiomglegales@gmail.com',
+      }
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey)
+
+      setSubmitMessage("¡Consulta enviada exitosamente!")
+      setFormData({ name: "", email: "", phone: "", message: "" })
+    } catch (error) {
+      setSubmitMessage("Error al enviar la consulta. Inténtalo de nuevo.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -47,7 +75,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Teléfono</h3>
-                    <p className="text-sm text-muted-foreground">+54 11 1234-5678</p>
+                    <p className="text-sm text-muted-foreground">+54 9 291 648-2826</p>
                   </div>
                 </div>
               </CardContent>
@@ -75,7 +103,10 @@ export function ContactSection() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Dirección</h3>
-                    <p className="text-sm text-muted-foreground">Av. Corrientes 1234, CABA</p>
+                    <ul className="text-sm text-muted-foreground">
+                                                     <li>Berutti 323, Bahia Blanca</li>
+               <li>25 de mayo 243, Tornquist</li>
+                    </ul>
                   </div>
                 </div>
               </CardContent>
@@ -100,6 +131,11 @@ export function ContactSection() {
           {/* Contact Form */}
           <Card className="lg:col-span-2 border-2 transition-all duration-300 hover:border-primary hover:shadow-lg">
             <CardContent className="p-8">
+              {submitMessage && (
+                <div className={`mb-4 p-4 rounded-lg ${submitMessage.includes('Error') ? 'bg-red-100 text-red-800' : 'bg-green-100 text-green-800'}`}>
+                  {submitMessage}
+                </div>
+              )}
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
@@ -161,8 +197,8 @@ export function ContactSection() {
                   />
                 </div>
 
-                <Button type="submit" size="lg" className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
-                  Enviar Consulta
+                <Button type="submit" size="lg" className="w-full bg-accent text-accent-foreground hover:bg-accent/90" disabled={isSubmitting}>
+                  {isSubmitting ? "Enviando..." : "Enviar Consulta"}
                 </Button>
               </form>
             </CardContent>

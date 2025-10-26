@@ -49,9 +49,10 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Contacto</h3>
             <ul className="space-y-2 text-sm opacity-80">
-              <li>+54 11 1234-5678</li>
+              <li>+54 9 291 648-2826 (Agustín Gatti)</li>
               <li>estudiomglegales@gmail.com</li>
-              <li>Av. Corrientes 1234, CABA</li>
+              <li>Berutti 323, Bahia Blanca</li>
+              <li>25 de mayo 243, Tornquist</li>
             </ul>
           </div>
         </div>
