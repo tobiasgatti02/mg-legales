@@ -60,31 +60,52 @@ export function ContactSection() {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="font-sans text-3xl md:text-5xl font-bold text-foreground mb-6 text-balance">Contactanos</h2>
           <p className="text-lg text-muted-foreground text-pretty leading-relaxed">
-            Estamos aquí para ayudarte. Primera consulta sin cargo.
+            Estamos aquí para ayudarte.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {/* WhatsApp Contact - Principal */}
+          <Card className="lg:col-span-2 border-2 transition-all duration-300 hover:border-primary hover:shadow-lg">
+            <CardContent className="p-8">
+              <div className="text-center space-y-6">
+                <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                  <MessageCircle className="w-10 h-10 text-primary" />
+                </div>
+                <h3 className="font-sans text-2xl md:text-3xl font-bold text-foreground">
+                  Escribinos por WhatsApp
+                </h3>
+                <p className="text-lg text-muted-foreground">
+                  Obtén una respuesta rápida a tu consulta. Estamos disponibles para ayudarte.
+                </p>
+                <Button
+                  size="lg"
+                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-all duration-300 text-lg py-6"
+                  asChild
+                >
+                  <a
+                    href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <MessageCircle className="mr-2 h-6 w-6" />
+                    Iniciar conversación
+                  </a>
+                </Button>
+                <p className="text-sm text-muted-foreground">
+                  <Phone className="inline w-4 h-4 mr-1" />
+                  +54 9 291 648-2826
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+
           {/* Contact Info Cards */}
           <div className="space-y-6">
             <Card className="border-2 transition-all duration-300 hover:border-primary hover:shadow-md">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-1">Teléfono</h3>
-                    <p className="text-sm text-muted-foreground">+54 9 291 648-2826</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 transition-all duration-300 hover:border-primary hover:shadow-md">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
                     <Mail className="w-6 h-6 text-primary" />
                   </div>
                   <div>
@@ -98,39 +119,28 @@ export function ContactSection() {
             <Card className="border-2 transition-all duration-300 hover:border-primary hover:shadow-md">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
                     <MapPin className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Dirección</h3>
                     <ul className="text-sm text-muted-foreground">
-                                                     <li>Berutti 323, Bahia Blanca</li>
-               <li>25 de mayo 243, Tornquist</li>
+                      <li>Berutti 323, Bahia Blanca</li>
+                      <li>25 de mayo 243, Tornquist</li>
                     </ul>
                   </div>
                 </div>
               </CardContent>
             </Card>
-
-            <Button
-              size="lg"
-              className="w-full bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-all duration-300"
-              asChild
-            >
-              <a
-                href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <MessageCircle className="mr-2 h-5 w-5" />
-                Escribinos por WhatsApp
-              </a>
-            </Button>
           </div>
 
-          {/* Contact Form */}
-          <Card className="lg:col-span-2 border-2 transition-all duration-300 hover:border-primary hover:shadow-lg">
+          {/* Contact Form - Secundario */}
+          <Card className="lg:col-span-3 border-2 transition-all duration-300 hover:border-primary hover:shadow-lg">
             <CardContent className="p-8">
+              <div className="mb-6 text-center">
+                <h3 className="font-sans text-2xl font-semibold text-foreground">Formulario por Email</h3>
+                <p className="text-sm mt-4 text-muted-foreground">Si preferís, enviános la consulta por email y te responderemos a la brevedad.</p>
+              </div>
               {submitMessage && (
                 <div className={`mb-4 p-4 rounded-lg ${submitMessage.includes('Error') ? 'bg-red-100 text-red-800' : 'bg-green-100 text-green-800'}`}>
                   {submitMessage}

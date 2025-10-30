@@ -42,7 +42,7 @@ export function Navbar() {
               <div className="font-sans text-lg md:text-xl font-semibold text-foreground leading-tight">
                 Mazzarini & Gatti
               </div>
-              <div className="text-xs md:text-sm text-muted-foreground tracking-wider">AMPARO DE SALUD</div>
+              <div className="text-xs md:text-sm text-muted-foreground tracking-wider">AMPAROS DE SALUD</div>
             </div>
           </Link>
 

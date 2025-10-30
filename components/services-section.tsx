@@ -4,7 +4,7 @@ import { Shield, FileText, Users, Clock } from "lucide-react"
 const services = [
   {
     icon: Shield,
-    title: "Amparo de Salud",
+    title: "Amparos de Salud",
     description:
       "Defendemos tu derecho a recibir tratamientos, medicamentos y coberturas médicas negadas por obras sociales y prepagas.",
   },
@@ -30,9 +30,9 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section id="servicios" className="py-20 md:py-32 bg-secondary/30">
+    <section id="servicios" className="py-8 md:py-16 bg-secondary/30">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="font-sans text-3xl md:text-5xl font-bold text-foreground mb-6 text-balance">
             Nuestros Servicios
           </h2>

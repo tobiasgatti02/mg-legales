@@ -15,7 +15,7 @@ export function Footer() {
               </div>
               <div>
                 <div className="font-sans text-lg font-semibold leading-tight">Mazzarini & Gatti</div>
-                <div className="text-xs tracking-wider opacity-80">AMPARO DE SALUD</div>
+                <div className="text-xs tracking-wider opacity-80">AMPAROS DE SALUD</div>
               </div>
             </div>
             <p className="text-sm opacity-80 leading-relaxed">
