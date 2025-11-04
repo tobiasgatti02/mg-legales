@@ -50,6 +50,7 @@ export function Footer() {
             <h3 className="font-semibold mb-4">Contacto</h3>
             <ul className="space-y-2 text-sm opacity-80">
               <li>+54 9 291 648-2826 (Agustín Gatti)</li>
+              <li>+54 9 2915 04-1220 (Agustín Mazzarini)</li>
               <li>estudiomglegales@gmail.com</li>
               <li>Berutti 323, Bahia Blanca</li>
               <li>25 de mayo 243, Tornquist</li>

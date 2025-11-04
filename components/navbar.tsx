@@ -60,12 +60,7 @@ export function Navbar() {
             >
               Nosotros
             </button>
-            <button
-              onClick={() => scrollToSection("contacto")}
-              className="text-sm text-foreground hover:text-primary transition-colors"
-            >
-              Contacto
-            </button>
+
             <Button
               onClick={() => scrollToSection("contacto")}
               className="bg-accent text-accent-foreground hover:bg-accent/90"
