@@ -60,6 +60,10 @@ export function Footer() {
         <div className="border-t border-accent-foreground/20 pt-8 text-center text-sm opacity-80">
           <p>&copy; {currentYear} Mazzarini & Gatti - Estudio Jurídico. Todos los derechos reservados.</p>
         </div>
+        <div className=" pt-4 text-center text-sm opacity-80 mt-2">
+                    <p>Página web desarrollada por <Link className="underline" href={"https://www.linkedin.com/in/tobias-gatti-610a83170/"}> Tobías Gatti</Link></p>
+
+        </div>
       </div>
     </footer>
   )

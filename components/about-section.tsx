@@ -1,5 +1,8 @@
+"use client"
+
 import { CheckCircle2 } from "lucide-react"
 import Image from "next/image"
+import { FAQSection } from "./faq-section"
 const features = [
   "Atención personalizada por los Dres. Mazzarini y Gatti",
 ]
@@ -36,16 +39,18 @@ export function AboutSection() {
             <div className="space-y-4 mb-8">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-start gap-3 transition-all duration-300 hover:translate-x-2">
-                  <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-6 h-6 text-primary shrink-0 mt-0.5" />
                   <span className="text-foreground">{feature}</span>
                 </div>
               ))}
             </div>
 
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed mb-6">
               Nuestro equipo está preparado para brindarte el mejor asesoramiento legal y acompañarte en cada paso del
               proceso hasta lograr el resultado que buscas.
             </p>
+
+            <FAQSection />
           </div>
         </div>
       </div>

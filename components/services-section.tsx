@@ -41,18 +41,18 @@ export function ServicesSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-5xl mx-auto">
           {services.map((service, index) => (
             <Card
               key={index}
-              className="border-2 hover:border-primary hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              className="border border-border/50 hover:border-primary hover:shadow-md hover:-translate-y-1 transition-all duration-300 group"
             >
-              <CardContent className="p-8">
-                <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 transition-all duration-300 group-hover:bg-primary/20">
-                  <service.icon className="w-7 h-7 text-primary" />
+              <CardContent className="p-6">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-primary/20">
+                  <service.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="font-sans text-xl md:text-2xl font-semibold text-foreground mb-3">{service.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                <h3 className="font-sans text-lg md:text-xl font-semibold text-foreground mb-2">{service.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
               </CardContent>
             </Card>
           ))}

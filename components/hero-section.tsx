@@ -1,13 +1,29 @@
+"use client"
+
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Phone } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
 export function HeroSection() {
-  const whatsappNumber = "5492916482826"; // Reemplaza con tu número real
+  const whatsappNumber = "5492916482826"; 
   const whatsappMessage = encodeURIComponent(
     "Hola, me gustaría obtener más información sobre sus servicios"
   );
+
+  const scrollToContact = () => {
+    const element = document.getElementById("contacto")
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
+  const scrollToFAQ = () => {
+    const element = document.getElementById("preguntas")
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+    }
+  }
 
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-16 md:pt-20 bg-background">
@@ -36,22 +52,22 @@ export function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-
+            <Button
+              size="lg"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 text-base px-8 py-6 w-full sm:w-auto transition-all duration-300"
+              onClick={scrollToContact}
+            >
+              <MessageCircle className="mr-2 h-5 w-5" />
+              Iniciá tu amparo de salud
+            </Button>
 
             <Button
               size="lg"
               variant="outline"
               className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground hover:scale-105 text-base px-8 py-6 w-full sm:w-auto bg-transparent transition-all duration-300"
-              asChild
+              onClick={scrollToFAQ}
             >
-              <a
-                href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <MessageCircle className="mr-2 h-5 w-5" />
-                WhatsApp
-              </a>
+              Preguntas frecuentes
             </Button>
           </div>
         </div>

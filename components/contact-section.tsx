@@ -89,7 +89,7 @@ export function ContactSection() {
                     rel="noopener noreferrer"
                   >
                     <MessageCircle className="mr-2 h-6 w-6" />
-                    Iniciar conversación
+                    Iniciá tu amparo de salud
                   </a>
                 </Button>
                 <p className="text-sm text-muted-foreground">
