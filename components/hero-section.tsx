@@ -37,7 +37,7 @@ export function HeroSection() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-block mb-6 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full transition-all duration-300 hover:bg-primary/20">
             <span className="text-sm text-primary font-medium">
-              Especialistas en Amparos de Salud
+              Defensa del derecho de salud
             </span>
           </div>
 
@@ -52,22 +52,16 @@ export function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button
-              size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 text-base px-8 py-6 w-full sm:w-auto transition-all duration-300"
-              onClick={scrollToContact}
-            >
-              <MessageCircle className="mr-2 h-5 w-5" />
-              Iniciá tu amparo de salud
-            </Button>
+
 
             <Button
               size="lg"
               variant="outline"
               className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground hover:scale-105 text-base px-8 py-6 w-full sm:w-auto bg-transparent transition-all duration-300"
-              onClick={scrollToFAQ}
+              onClick={scrollToContact}
             >
-              Preguntas frecuentes
+              <MessageCircle className="mr-2 h-5 w-5" />
+              Iniciá tu amparo de salud
             </Button>
           </div>
         </div>
