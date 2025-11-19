@@ -28,7 +28,7 @@ export function WhatsAppFloat() {
         className="flex items-center gap-3 px-4 py-3 bg-green-600 text-white rounded-full shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5"
       >
         <MessageCircle className="w-5 h-5" />
-        <span className="hidden sm:inline-block font-medium">Escribinos</span>
+        <span className="hidden sm:inline-block font-medium">Escribínos</span>
       </a>
     </div>
   )

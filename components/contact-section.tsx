@@ -73,7 +73,7 @@ export function ContactSection() {
                   <MessageCircle className="w-10 h-10 text-primary" />
                 </div>
                 <h3 className="font-sans text-2xl md:text-3xl font-bold text-foreground">
-                  Escribinos por WhatsApp
+                  Escribínos por WhatsApp
                 </h3>
                 <p className="text-lg text-muted-foreground">
                   Obtén una respuesta rápida a tu consulta. Estamos disponibles para ayudarte.
