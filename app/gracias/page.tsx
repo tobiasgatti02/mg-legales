@@ -29,7 +29,7 @@ export default function GraciasPage() {
             
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
               Recibimos tu mensaje correctamente. Un miembro de nuestro equipo se pondrá en contacto contigo 
-              <span className="text-foreground font-semibold"> en menos de 24 horas</span> para analizar tu caso.
+              <span className="text-foreground font-semibold"> de manera prioritaria</span> para analizar tu caso.
             </p>
 
             <div className="bg-secondary/30 border-2 border-border rounded-lg p-6 mb-8">
