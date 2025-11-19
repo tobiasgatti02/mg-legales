@@ -77,7 +77,7 @@ export default function AmparosDeSaludPage() {
             
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 text-pretty leading-relaxed">
               Abogados especializados en Bahía Blanca y la zona. Defendemos tu derecho a recibir medicamentos, cirugías y tratamientos médicos. 
-              <span className="text-foreground font-semibold"> Actuamos rápido y eficientemente.</span>
+              <span className="text-foreground font-semibold"> Actuamos rápido, de manera clara y transparente</span>
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
