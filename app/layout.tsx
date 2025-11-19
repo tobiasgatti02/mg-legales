@@ -3,6 +3,9 @@ import type { Metadata } from "next"
 import { Playfair_Display, Inter } from "next/font/google"
 import "./globals.css"
 import { Analytics } from "@vercel/analytics/next"
+import { GoogleTagManager, GoogleTagManagerNoScript } from "@/lib/gtm"
+import dynamic from "next/dynamic"
+const WhatsAppFloat = dynamic(() => import("@/components/whatsapp-float").then(m => m.WhatsAppFloat), { ssr: true })
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -16,7 +19,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Estudio Jurídico - Amparos de Salud",
+  title: "Abogados Bahia Blanca - Amparos de Salud",
   description: "Defensa de derecho de salud Bahia Blanca. Defendemos tu derecho a la salud con profesionalismo y dedicación.",
 }
 
@@ -27,8 +30,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      <head>
+        <GoogleTagManager />
+      </head>
       <body className={`${playfairDisplay.variable} ${inter.variable} font-mono antialiased`}>
+        <GoogleTagManagerNoScript />
         {children}
+        <WhatsAppFloat />
         <Analytics />
       </body>
     </html>

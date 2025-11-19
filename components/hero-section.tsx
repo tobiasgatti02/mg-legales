@@ -42,12 +42,12 @@ export function HeroSection() {
           </div>
 
           <h1 className="font-sans text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 text-balance leading-tight">
-            Defendemos tu derecho a la salud
+            Defensa del derecho a la Salud en Bahía Blanca
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto text-pretty leading-relaxed">
-            Asesoramiento legal especializado <b>en amparos de salud</b>. Protegemos
-            tus derechos con profesionalismo, dedicación y resultados
+            Abogados especializados en <b>Amparos de Salud en Bahía Blanca</b>. Protegemos
+            tus derechos ante obras sociales y prepagas con profesionalismo, dedicación y resultados
             comprobados.
           </p>
 
@@ -58,10 +58,12 @@ export function HeroSection() {
               size="lg"
               variant="outline"
               className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground hover:scale-105 text-base px-8 py-6 w-full sm:w-auto bg-transparent transition-all duration-300"
-              onClick={scrollToContact}
+              asChild
             >
-              <MessageCircle className="mr-2 h-5 w-5" />
-              Iniciá tu amparo de salud
+              <Link href="/amparos-de-salud">
+                <MessageCircle className="mr-2 h-5 w-5" />
+                Iniciá tu <b>Amparo de Salud</b>
+              </Link>
             </Button>
           </div>
         </div>

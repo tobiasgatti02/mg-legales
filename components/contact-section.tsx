@@ -55,7 +55,7 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contacto" className="py-20 md:py-32 bg-secondary/30">
+    <section id="contacto" className="py-4 md:py-4 bg-secondary/30">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="font-sans text-3xl md:text-5xl font-bold text-foreground mb-6 text-balance">Contactanos</h2>
@@ -89,7 +89,7 @@ export function ContactSection() {
                     rel="noopener noreferrer"
                   >
                     <MessageCircle className="mr-2 h-6 w-6" />
-                    Iniciá tu amparo de salud
+                    Iniciá tu <b>Amparo de Salud</b>
                   </a>
                 </Button>
                 <p className="text-sm text-muted-foreground">
