@@ -76,8 +76,8 @@ export default function AmparosDeSaludPage() {
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 text-pretty leading-relaxed">
-              Abogados especializados en Bahía Blanca. Defendemos tu derecho a recibir medicamentos, cirugías y tratamientos médicos. 
-              <span className="text-foreground font-semibold"> Actuamos rápido y con eficiencia.</span>
+              Abogados especializados en Bahía Blanca y la zona. Defendemos tu derecho a recibir medicamentos, cirugías y tratamientos médicos. 
+              <span className="text-foreground font-semibold"> Actuamos rápido y eficientemente.</span>
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -198,8 +198,8 @@ export default function AmparosDeSaludPage() {
             <div className="flex flex-col justify-center gap-4">
               <div className="p-6 bg-background/60 rounded-lg border-2">
                 <h3 className="font-sans text-xl font-bold text-foreground mb-2">Estudio Jurídico Mazzarini-Gatti</h3>
-                <p className="text-sm text-muted-foreground">Av. Alem 123, Bahía Blanca, Provincia de Buenos Aires</p>
-                <p className="text-sm text-muted-foreground">Tel: <a href="tel:+54 9 291 648-2826" className="text-primary">+54 9 291 400 0000</a></p>
+                <p className="text-sm text-muted-foreground">Berutti 323, Bahia Blanca, Provincia de Buenos Aires</p>
+                <p className="text-sm text-muted-foreground">Tel: <a href="tel:+54 9 291 648-2826" className="text-primary">+54 9 291 648-2826</a></p>
               </div>
 
               <div>
