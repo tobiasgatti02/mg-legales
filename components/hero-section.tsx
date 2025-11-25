@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { MessageCircle, Phone } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { FAQSection } from "./faq-section";
 
 export function HeroSection() {
   const whatsappNumber = "5492916482826"; 
@@ -57,7 +58,7 @@ export function HeroSection() {
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground hover:scale-105 text-base px-8 py-6 w-full sm:w-auto bg-transparent transition-all duration-300"
+              className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground hover:scale-105 text-lg px-32 py-10 w-full sm:w-auto bg-transparent transition-all duration-300"
               asChild
             >
               <Link href="/amparos-de-salud">
@@ -65,6 +66,8 @@ export function HeroSection() {
                 Iniciá tu <b>Amparo de Salud</b>
               </Link>
             </Button>
+
+            
           </div>
         </div>
       </div>

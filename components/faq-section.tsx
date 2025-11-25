@@ -39,6 +39,9 @@ export function FAQSection() {
     <section id="preguntas" className="py-20 md:py-10 bg-background">
         <div className="max-w-3xl mx-auto text-center mb-16">
 
+          <h2 className="font-sans text-3xl md:text-5xl font-bold text-foreground mb-6 text-balance">
+              Preguntas Frecuentes
+          </h2>
 
         <div className="max-w-3xl mx-auto">
           <Accordion type="single" collapsible className="w-full space-y-4">

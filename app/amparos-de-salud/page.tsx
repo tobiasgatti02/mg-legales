@@ -87,7 +87,7 @@ export default function AmparosDeSaludPage() {
                 asChild
               >
                 <a 
-                  href="https://wa.me/5492914000000?text=Hola%2C%20necesito%20consultar%20por%20un%20amparo%20de%20salud" 
+                  href="https://wa.me/542916482826?text=Hola%2C%20necesito%20consultar%20por%20un%20amparo%20de%20salud" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"
@@ -103,7 +103,7 @@ export default function AmparosDeSaludPage() {
                 className="text-lg px-8 py-6 w-full sm:w-auto"
                 asChild
               >
-                <a href="tel:+5492914000000" className="flex items-center gap-2">
+                <a href="tel:+542916482826" className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
                   Llamar Ahora
                 </a>
@@ -113,78 +113,13 @@ export default function AmparosDeSaludPage() {
         </div>
       </section>
 
-      {/* ¿Qué podés reclamar? - Dropdowns (Accordion) */}
-      <section className="py-8 md:py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-sans text-3xl md:text-4xl font-bold text-foreground mb-6 text-center">
-              ¿Qué podés reclamar?
-            </h2>
-
-            <Accordion type="single" collapsible>
-              <AccordionItem value="reclamar">
-                <AccordionTrigger>¿Qué podés reclamar con un Amparo de Salud?</AccordionTrigger>
-                <AccordionContent>
-                  <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
-                    <li>Medicación de alto costo</li>
-                    <li>Estudios médicos (resonancias, análisis complejos, etc)</li>
-                    <li>Cirugías Urgentes, intervenciones demoradas</li>
-                    <li>Psicología, fonoaudiología, kinesiología, Terapia Ocupacional</li>
-                    <li>Acompañante Terapéutico (AT)</li>
-                    <li>Prótesis, audífonos, sillas de ruedas e insumos</li>
-                    <li>Internación y atención domiciliaria</li>
-                    <li>Tratamientos de fertilización</li>
-                    <li>Traslados</li>
-                    <li>Otro tipo de prestaciones</li>
-                  </ul>
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="porque">
-                <AccordionTrigger>¿Por qué iniciar un Amparo de Salud?</AccordionTrigger>
-                <AccordionContent>
-                  <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
-                    <li>Respuestas judiciales rápidas</li>
-                    <li>Medidas cautelares que ordenan la cobertura en días</li>
-                    <li>Alto nivel de efectividad</li>
-                    <li>Presentación completamente gestionada por profesionales</li>
-                  </ul>
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="como">
-                <AccordionTrigger>¿Cómo trabajamos?</AccordionTrigger>
-                <AccordionContent>
-                  <ol className="list-decimal pl-5 space-y-2 text-muted-foreground">
-                    <li>Analizamos tu caso y la viabilidad en una entrevista personal</li>
-                    <li>Reunimos la prescripción y documentación médica</li>
-                    <li>Redactamos y enviamos nota o carta documento a la Obra Social o Prepaga</li>
-                    <li>Presentamos la demanda de Amparo de Salud</li>
-                    <li>Solicitamos una Medida Cautelar Urgente</li>
-                    <li>Acompañamos todo el proceso hasta la cobertura efectiva</li>
-                  </ol>
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="cuando">
-                <AccordionTrigger>¿Cuándo corresponde un amparo?</AccordionTrigger>
-                <AccordionContent>
-                  <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
-                    <li>Cuando te rechazan una prestación médica</li>
-                    <li>Cuando no hay respuestas de parte de la Obra Social o Prepaga</li>
-                    <li>Cuando tu médico tratante indica algo y la Obra social no lo cubre</li>
-                    <li>Cuando está en riesgo tu salud o calidad de vida y necesitás una respuesta urgente</li>
-                  </ul>
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </div>
-        </div>
-      </section>
 
       {/* Mapa y Reseñas */}
       <section className="py-8 md:py-16 bg-secondary/10">
-        <div className="container mx-auto px-4">
+                  <h2 className="font-sans text-3xl md:text-4xl font-bold text-foreground mb-6 text-center">
+              Nuestro despacho
+            </h2>
+        <div className="container mx-auto mt-4 px-4">
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             <div className="w-full h-64 md:h-96 rounded-lg overflow-hidden border-2">
               <iframe
@@ -433,7 +368,7 @@ export default function AmparosDeSaludPage() {
                 asChild
               >
                 <a 
-                  href="https://wa.me/5492914000000?text=Hola%2C%20necesito%20consultar%20por%20un%20amparo%20de%20salud" 
+                  href="https://wa.me/542916482826?text=Hola%2C%20necesito%20consultar%20por%20un%20amparo%20de%20salud" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"

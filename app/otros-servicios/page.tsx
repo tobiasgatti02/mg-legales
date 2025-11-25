@@ -184,8 +184,8 @@ export default function OtrosServiciosPage() {
                 </Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <a href="https://wa.me/5492916482826?text=Hola%2C%20necesito%20asesoramiento%20legal">
-                  Consultar por WhatsApp
+                <a href="/amparos-de-salud#contacto">
+                  Contactanos
                 </a>
               </Button>
             </div>

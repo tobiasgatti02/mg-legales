@@ -3,6 +3,7 @@
 import { CheckCircle2 } from "lucide-react"
 import Image from "next/image"
 import { FAQSection } from "./faq-section"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 const features = [
   "Atención personalizada por los Dres. Mazzarini y Gatti",
 ]
@@ -50,7 +51,83 @@ export function AboutSection() {
               proceso hasta lograr el resultado que buscas.
             </p>
 
-            <FAQSection />
+            <Accordion type="single" collapsible className="w-full space-y-4">
+              <AccordionItem 
+                value="reclamar"
+                className="border border-border rounded-lg px-6 transition-all duration-300 hover:border-primary data-[state=open]:border-primary data-[state=open]:shadow-md last:border-b"
+              >
+                <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary hover:no-underline py-5">
+                  ¿Qué podés reclamar con un Amparo de Salud?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li>Medicación de alto costo</li>
+                    <li>Estudios médicos (resonancias, análisis complejos, etc)</li>
+                    <li>Cirugías Urgentes, intervenciones demoradas</li>
+                    <li>Psicología, fonoaudiología, kinesiología, Terapia Ocupacional</li>
+                    <li>Acompañante Terapéutico (AT)</li>
+                    <li>Prótesis, audífonos, sillas de ruedas e insumos</li>
+                    <li>Internación y atención domiciliaria</li>
+                    <li>Tratamientos de fertilización</li>
+                    <li>Traslados</li>
+                    <li>Otro tipo de prestaciones</li>
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem 
+                value="porque"
+                className="border border-border rounded-lg px-6 transition-all duration-300 hover:border-primary data-[state=open]:border-primary data-[state=open]:shadow-md last:border-b"
+              >
+                <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary hover:no-underline py-5">
+                  ¿Por qué iniciar un Amparo de Salud?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li>Respuestas judiciales rápidas</li>
+                    <li>Medidas cautelares que ordenan la cobertura en días</li>
+                    <li>Alto nivel de efectividad</li>
+                    <li>Presentación completamente gestionada por profesionales</li>
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem 
+                value="como"
+                className="border border-border rounded-lg px-6 transition-all duration-300 hover:border-primary data-[state=open]:border-primary data-[state=open]:shadow-md last:border-b"
+              >
+                <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary hover:no-underline py-5">
+                  ¿Cómo trabajamos?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
+                  <ol className="list-decimal pl-5 space-y-2">
+                    <li>Analizamos tu caso y la viabilidad en una entrevista personal</li>
+                    <li>Reunimos la prescripción y documentación médica</li>
+                    <li>Redactamos y enviamos nota o carta documento a la Obra Social o Prepaga</li>
+                    <li>Presentamos la demanda de Amparo de Salud</li>
+                    <li>Solicitamos una Medida Cautelar Urgente</li>
+                    <li>Acompañamos todo el proceso hasta la cobertura efectiva</li>
+                  </ol>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem 
+                value="cuando"
+                className="border border-border rounded-lg px-6 transition-all duration-300 hover:border-primary data-[state=open]:border-primary data-[state=open]:shadow-md last:border-b"
+              >
+                <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary hover:no-underline py-5">
+                  ¿Cuándo corresponde un amparo?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li>Cuando te rechazan una prestación médica</li>
+                    <li>Cuando no hay respuestas de parte de la Obra Social o Prepaga</li>
+                    <li>Cuando tu médico tratante indica algo y la Obra social no lo cubre</li>
+                    <li>Cuando está en riesgo tu salud o calidad de vida y necesitás una respuesta urgente</li>
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
       </div>

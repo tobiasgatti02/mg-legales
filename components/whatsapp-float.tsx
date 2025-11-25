@@ -5,7 +5,7 @@ import { MessageCircle } from "lucide-react"
 import { trackConversion } from "@/lib/gtm"
 
 export function WhatsAppFloat() {
-  const phoneNumber = "5492914000000" // ACTUALIZAR con número real
+  const phoneNumber = "542916482826" // ACTUALIZAR con número real
   const message = encodeURIComponent("Hola, necesito consultar por un amparo de salud")
   const url = `https://wa.me/${phoneNumber}?text=${message}`
 
