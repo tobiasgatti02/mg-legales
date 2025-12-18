@@ -72,12 +72,12 @@ export default function AmparosDeSaludPage() {
             </div>
             
             <h1 className="font-sans text-4xl md:text-6xl font-bold text-foreground mb-6 text-balance">
-              ¿Tu Obra Social o Prepaga te Negó un Tratamiento en Bahía Blanca?
+              ¿Tu Obra Social o Prepaga te negó una prestación médica o tratamiento ?
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 text-pretty leading-relaxed">
-              Abogados especializados en Bahía Blanca y la zona. Defendemos tu derecho a recibir medicamentos, cirugías y tratamientos médicos. 
-              <span className="text-foreground font-semibold"> Actuamos rápido, de manera clara y transparente</span>
+             <span className="text-foreground font-semibold"> Atención en Bahía Blanca y toda la Provincia de Buenos Aires. </span>
+                Actuamos rápido, de manera clara y transparente
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -108,6 +108,30 @@ export default function AmparosDeSaludPage() {
                   Llamar Ahora
                 </a>
               </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+       <section className="py-12 md:py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-sans text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
+              Casos que Resolvemos
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {casos.map((caso, index) => (
+                <div 
+                  key={index}
+                  className="flex items-start gap-3 p-4 bg-secondary/30 rounded-lg hover:bg-secondary/50 transition-colors"
+                >
+                  <CheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
+                  <span className="text-lg text-foreground">{caso}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -203,56 +227,10 @@ export default function AmparosDeSaludPage() {
       />
 
       {/* Casos que Resolvemos */}
-      <section className="py-12 md:py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="font-sans text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
-              Casos que Resolvemos
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {casos.map((caso, index) => (
-                <div 
-                  key={index}
-                  className="flex items-start gap-3 p-4 bg-secondary/30 rounded-lg hover:bg-secondary/50 transition-colors"
-                >
-                  <CheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
-                  <span className="text-lg text-foreground">{caso}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+     
 
-      {/* Por Qué Elegirnos */}
-      <section className="py-12 md:py-20 bg-secondary/20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="font-sans text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
-              ¿Por Qué Confiar en Nosotros?
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {beneficios.map((beneficio, index) => (
-                <Card key={index} className="border-2 hover:border-primary transition-all duration-300">
-                  <CardContent className="p-6 text-center">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
-                      <beneficio.icon className="w-8 h-8 text-primary" />
-                    </div>
-                    <h3 className="font-sans text-xl font-bold text-foreground mb-3">
-                      {beneficio.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {beneficio.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+
+
 
       {/* Formulario de Contacto */}
       <section id="contacto" className="py-12 md:py-20">
