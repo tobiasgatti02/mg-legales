@@ -47,7 +47,7 @@ export function HeroSection() {
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-2xl mx-auto text-pretty leading-relaxed">
-            Abogados especializados en Amparos de Salud en <b>Bahía Blanca y toda la Provincia. de Buenos Aires</b>. Protegemos
+            Abogados especializados en Amparos de Salud en <b>Bahía Blanca y toda la Provincia de Buenos Aires</b>. Protegemos
             tus derechos ante obras sociales y prepagas con profesionalismo, dedicación y resultados
             comprobados.
           </p>
