@@ -77,7 +77,7 @@ export default function AmparosDeSaludPage() {
             
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 text-pretty leading-relaxed">
              <span className="text-foreground font-semibold"> Atención en Bahía Blanca y toda la Provincia de Buenos Aires. </span>
-                Actuamos rápido, de manera clara y transparente
+                Gestión legal rápida y 100% online.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
