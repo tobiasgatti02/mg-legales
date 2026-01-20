@@ -43,13 +43,17 @@ export function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
+            <Link href="/amparos-de-salud" className="text-sm text-foreground hover:text-primary transition-colors">
+              Amparos de Salud
+            </Link>
+
             <Button
               asChild
-              className="relative inline-flex items-center gap-2 text-sm font-semibold text-white hover:opacity-95 transition-all"
-              style={{ backgroundColor: "text-primary", padding: "0.5rem 0.75rem" }}
+              className="relative inline-flex items-center gap-2 text-sm font-semibold text-white hover:opacity-95 transition-all bg-orange-600 hover:bg-orange-700"
+              style={{ padding: "0.5rem 0.75rem" }}
             >
-              <Link href="/amparos-de-salud" aria-label="Amparos de Salud">
-                Amparos de Salud
+              <Link href="/accidentes-de-trabajo" aria-label="Accidentes de Trabajo">
+                Accidentes de Trabajo
                 <span className="absolute -top-2 -right-2 flex h-5 w-5">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-5 w-5 bg-green-300"></span>
@@ -61,17 +65,6 @@ export function Navbar() {
               Otros Servicios
             </Link>
 
-            <button onClick={() => scrollToSection("servicios")} className="text-sm text-foreground hover:text-primary transition-colors">
-              Servicios
-            </button>
-
-            <button onClick={() => scrollToSection("nosotros")} className="text-sm text-foreground hover:text-primary transition-colors">
-              Nosotros
-            </button>
-
-            <Button onClick={() => scrollToSection("contacto")} className="bg-accent text-accent-foreground hover:bg-accent/90">
-              Contactános
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -84,13 +77,16 @@ export function Navbar() {
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-border bg-background">
             <div className="flex flex-col gap-4">
+              <Link href="/amparos-de-salud" className="text-left px-4 py-2 text-foreground hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+                Amparos de Salud
+              </Link>
+
               <Button
                 asChild
-                className="w-full text-left px-4 py-2 font-semibold text-white inline-flex items-center gap-2 justify-between"
-                style={{ backgroundColor: "oklch(0.565 0.138 180.723)" }}
+                className="w-full text-left px-4 py-2 font-semibold text-white inline-flex items-center gap-2 justify-between bg-orange-600 hover:bg-orange-700"
               >
-                <Link href="/amparos-de-salud" onClick={() => setIsMobileMenuOpen(false)} aria-label="Amparos de Salud">
-                  <span>Amparos de Salud</span>
+                <Link href="/accidentes-de-trabajo" onClick={() => setIsMobileMenuOpen(false)} aria-label="Accidentes de Trabajo">
+                  <span>Accidentes de Trabajo</span>
                   <span className="inline-flex h-2 w-2 rounded-full bg-green-500" />
                 </Link>
               </Button>

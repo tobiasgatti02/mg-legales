@@ -27,16 +27,7 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Enlaces Rápidos</h3>
             <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="#servicios" className="opacity-80 hover:opacity-100 transition-opacity">
-                  Servicios
-                </Link>
-              </li>
-              <li>
-                <Link href="#nosotros" className="opacity-80 hover:opacity-100 transition-opacity">
-                  Nosotros
-                </Link>
-              </li>
+
               <li>
                 <Link href="#contacto" className="opacity-80 hover:opacity-100 transition-opacity">
                   Contacto
