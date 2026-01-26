@@ -120,12 +120,22 @@ export default function AccidentesDeTrabajoPage() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-24 md:pt-32 pb-12 md:pb-20 bg-linear-to-br from-orange-500/5 via-background to-secondary/20">
-        <div className="container mx-auto px-4">
+      <section className="relative pt-24 md:pt-32 pb-20 md:pb-28 overflow-hidden">
+        <Image
+                src="/image.jpg"
+                alt="Accidente laboral Bahia Blanca"
+                fill
+                className="absolute top-0 left-0 w-full h-full object-cover opacity-25"
+              />
+        {/* Gradiente de fondo */}
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 via-background to-secondary/20" />
+        {/* Difuminado inferior */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+        <div className="relative z-10 container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/10 rounded-full mb-6">
+            <div className="inline-flex items-center gap-2 px-6 py-6 bg-orange-500/10 rounded-full mb-6">
               <HardHat className="w-5 h-5 text-orange-600" />
-              <span className="text-sm font-semibold text-orange-600">Especialistas en Accidentes de Trabajo</span>
+              <span className="text-sm font-semibold text-orange-600">Abogados Accidentes de Trabajo - Bahia Blanca</span>
             </div>
             
             <h1 className="font-sans text-4xl md:text-6xl font-bold text-foreground mb-6 text-balance">
@@ -137,33 +147,30 @@ export default function AccidentesDeTrabajoPage() {
               <span className="text-foreground">Reclamamos por tus derechos como trabajador ante la ART, tanto en sede administrativa (Comisión Médica) como judicial. Acompañamiento legal y médico en todo el proceso, para lograr la indemnización correspondiente según tu caso.</span>
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="relative z-10 flex flex-col sm:flex-row gap-5 justify-center items-center">
               <Button 
                 size="lg" 
-                className="text-lg px-8 py-6 w-full sm:w-auto bg-orange-600 hover:bg-orange-700"
+                className="text-xl px-14 py-10 w-full sm:w-auto bg-orange-600 hover:bg-orange-700 shadow-lg hover:shadow-xl transition-all"
                 asChild
               >
                 <a 
                   href="https://wa.me/5492915041220?text=Hola%2C%20necesito%20consultar%20por%20un%20accidente%20de%20trabajo" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2"
+                  className="flex items-center gap-3"
                 >
-                  <MessageCircle className="w-5 h-5" />
-                  Consulta por WhatsApp
+                  <MessageCircle className="font-bold w-6 h-6" />
+                  <p className="font-bold ">Iniciá hoy tu Reclamo Laboral</p>
                 </a>
               </Button>
               
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="text-lg px-8 py-6 w-full sm:w-auto"
+                className="text-xl px-10 py-7 w-full sm:w-auto bg-background border-2 border-orange-600 text-orange-600 hover:bg-orange-50 shadow-lg hover:shadow-xl transition-all"
                 asChild
               >
-                <a href="tel:+5492915041220" className="flex items-center gap-2">
-                  <Phone className="w-5 h-5" />
-                  Llamar Ahora
-                </a>
+                
               </Button>
             </div>
           </div>
@@ -222,48 +229,7 @@ export default function AccidentesDeTrabajoPage() {
         </div>
       </section>
 
-      {/* Mapa y Contacto */}
-      <section className="py-8 md:py-16">
-        <h2 className="font-sans text-3xl md:text-4xl font-bold text-foreground mb-6 text-center">
-          Nuestro despacho
-        </h2>
-        <div className="container mx-auto mt-4 px-4">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-            <div className="w-full h-64 md:h-96 rounded-lg overflow-hidden border-2">
-              <iframe
-                title="Estudio Jurídico Mazzarini-Gatti - Map"
-                src="https://www.google.com/maps?q=-38.7245635,-62.2670839&hl=es&z=17&output=embed"
-                className="w-full h-full border-0"
-                loading="lazy"
-              />
-            </div>
 
-            <div className="flex flex-col justify-center gap-4">
-              <div className="p-6 bg-background/60 rounded-lg border-2">
-                <h3 className="font-sans text-xl font-bold text-foreground mb-2">Estudio Jurídico Mazzarini-Gatti</h3>
-                <p className="text-sm text-muted-foreground">Berutti 323, Bahia Blanca, Provincia de Buenos Aires</p>
-                <p className="text-sm text-muted-foreground">Tel: <a href="tel:+54 9 291 504-1220" className="text-primary">+54 9 291 504-1220</a></p>
-              </div>
-
-              <div>
-                <Button
-                  asChild
-                  className="w-full text-center px-6 py-4 text-lg font-semibold"
-                >
-                  <a
-                    href="https://www.google.com.ar/maps/place/Estudio+Jur%C3%ADdico+Mazzarini-Gatti+y+asociados/@-38.7244721,-62.266976,3a,75y,90t/data=!3m8!1e2!3m6!1sCIABIhCMRr61mqmDih31BJ2nwD2_!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fgps-cs-s%2FAG0ilSyHCuMVaoIvC7pkKWP2jhG_wG-WSXkQdtU-Lgvyl0ccR4IKZJ3h_9edWHVjjIZ2FjEAjssPKbkwommUEapbMQ8zo0zdSbYYOLUfjpaMg-Od2FFEo81WVQJVJaRMAeUHTokg9QkMSubBQny0%3Dw86-h114-k-no!7i3024!8i4032!4m17!1m9!3m8!1s0x95edbddcdf1eb265:0x5c101d1aff154daa!2sEstudio+Jur%C3%ADdico+Mazzarini-Gatti+y+asociados!8m2!3d-38.7245635!4d-62.2670839!9m1!1b1!16s%2Fg%2F11zklwjsgc!3m6!1s0x95edbddcdf1eb265:0x5c101d1aff154daa!8m2!3d-38.7245635!4d-62.2670839!10e5!16s%2Fg%2F11zklwjsgc?hl=es&entry=ttu"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Ver en Google Maps"
-                  >
-                    Conoce nuestro despacho
-                  </a>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
 
       {/* FAQs */}
@@ -309,6 +275,49 @@ export default function AccidentesDeTrabajoPage() {
                     Los Dres. Agustín Mazzarini y Agustín Gatti lideran un estudio jurídico especializado en la defensa de tus derechos laborales.
                   </p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+            {/* Mapa y Contacto */}
+      <section className="py-8 md:py-16">
+        <h2 className="font-sans text-3xl md:text-4xl font-bold text-foreground mb-6 text-center">
+          Nuestro despacho
+        </h2>
+        <div className="container mx-auto mt-4 px-4">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+            <div className="w-full h-64 md:h-96 rounded-lg overflow-hidden border-2">
+              <iframe
+                title="Estudio Jurídico Mazzarini-Gatti - Map"
+                src="https://www.google.com/maps?q=-38.7245635,-62.2670839&hl=es&z=17&output=embed"
+                className="w-full h-full border-0"
+                loading="lazy"
+              />
+            </div>
+
+            <div className="flex flex-col justify-center gap-4">
+              <div className="p-6 bg-background/60 rounded-lg border-2">
+                <h3 className="font-sans text-xl font-bold text-foreground mb-2">Estudio Jurídico Mazzarini-Gatti</h3>
+                <p className="text-sm text-muted-foreground">Berutti 323, Bahia Blanca, Provincia de Buenos Aires</p>
+                <p className="text-sm text-muted-foreground">Tel: <a href="tel:+54 9 291 504-1220" className="text-primary">+54 9 291 504-1220</a></p>
+              </div>
+
+              <div>
+                <Button
+                  asChild
+                  className="w-full text-center px-6 py-4 text-lg font-semibold"
+                >
+                  <a
+                    href="https://www.google.com.ar/maps/place/Estudio+Jur%C3%ADdico+Mazzarini-Gatti+y+asociados/@-38.7244721,-62.266976,3a,75y,90t/data=!3m8!1e2!3m6!1sCIABIhCMRr61mqmDih31BJ2nwD2_!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fgps-cs-s%2FAG0ilSyHCuMVaoIvC7pkKWP2jhG_wG-WSXkQdtU-Lgvyl0ccR4IKZJ3h_9edWHVjjIZ2FjEAjssPKbkwommUEapbMQ8zo0zdSbYYOLUfjpaMg-Od2FFEo81WVQJVJaRMAeUHTokg9QkMSubBQny0%3Dw86-h114-k-no!7i3024!8i4032!4m17!1m9!3m8!1s0x95edbddcdf1eb265:0x5c101d1aff154daa!2sEstudio+Jur%C3%ADdico+Mazzarini-Gatti+y+asociados!8m2!3d-38.7245635!4d-62.2670839!9m1!1b1!16s%2Fg%2F11zklwjsgc!3m6!1s0x95edbddcdf1eb265:0x5c101d1aff154daa!8m2!3d-38.7245635!4d-62.2670839!10e5!16s%2Fg%2F11zklwjsgc?hl=es&entry=ttu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Ver en Google Maps"
+                  >
+                    Conoce nuestro despacho
+                  </a>
+                </Button>
               </div>
             </div>
           </div>

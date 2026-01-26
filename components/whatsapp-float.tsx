@@ -1,12 +1,20 @@
 "use client"
 
-import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { MessageCircle } from "lucide-react"
 import { trackConversion } from "@/lib/gtm"
 
 export function WhatsAppFloat() {
-  const phoneNumber = "542916482826" // ACTUALIZAR con número real
-  const message = encodeURIComponent("Hola, necesito consultar por un amparo de salud")
+  const pathname = usePathname()
+  
+  // Configuración según la página actual
+  const isAccidentesPage = pathname === "/accidentes-de-trabajo"
+  const phoneNumber = isAccidentesPage ? "5492915041220" : "542916482826"
+  const message = encodeURIComponent(
+    isAccidentesPage 
+      ? "Hola, necesito consultar por un accidente de trabajo" 
+      : "Hola, necesito consultar por un amparo de salud"
+  )
   const url = `https://wa.me/${phoneNumber}?text=${message}`
 
   const handleClick = () => {
