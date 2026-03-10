@@ -88,7 +88,7 @@ export default function AmparosDeSaludPage() {
                 asChild
               >
                 <a 
-                  href="https://wa.me/542916481220?text=Hola%2C%20necesito%20consultar%20por%20un%20amparo%20de%20salud" 
+                  href="https://wa.me/542915041220?text=Hola%2C%20necesito%20consultar%20por%20un%20amparo%20de%20salud" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"
@@ -104,7 +104,7 @@ export default function AmparosDeSaludPage() {
                 className="text-lg px-8 py-6 w-full sm:w-auto"
                 asChild
               >
-                <a href="tel:+542916481220" className="flex items-center gap-2">
+                <a href="tel:+542915041220" className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
                   Llamar Ahora
                 </a>
@@ -347,7 +347,7 @@ export default function AmparosDeSaludPage() {
                 asChild
               >
                 <a 
-                  href="https://wa.me/542916481220?text=Hola%2C%20necesito%20consultar%20por%20un%20amparo%20de%20salud" 
+                  href="https://wa.me/542915041220?text=Hola%2C%20necesito%20consultar%20por%20un%20amparo%20de%20salud" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"
