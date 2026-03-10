@@ -61,7 +61,7 @@ export default function GraciasPage() {
                   variant="outline"
                   asChild
                 >
-                  <a href="tel:+54 9 291 648-2826" className="flex items-center gap-2">
+                  <a href="tel:+54 9 291 648 1220" className="flex items-center gap-2">
                     <Phone className="w-5 h-5" />
                     Llamar Ahora
                   </a>

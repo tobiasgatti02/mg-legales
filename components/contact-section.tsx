@@ -21,7 +21,7 @@ export function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitMessage, setSubmitMessage] = useState("")
 
-  const whatsappNumber = "5492916482826"
+  const whatsappNumber = "5492916481220"
   const whatsappMessage = encodeURIComponent("Hola, me gustaría obtener más información sobre sus servicios" )
 
 

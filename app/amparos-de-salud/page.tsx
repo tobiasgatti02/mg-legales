@@ -88,7 +88,7 @@ export default function AmparosDeSaludPage() {
                 asChild
               >
                 <a 
-                  href="https://wa.me/542916482826?text=Hola%2C%20necesito%20consultar%20por%20un%20amparo%20de%20salud" 
+                  href="https://wa.me/542916481220?text=Hola%2C%20necesito%20consultar%20por%20un%20amparo%20de%20salud" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"
@@ -104,7 +104,7 @@ export default function AmparosDeSaludPage() {
                 className="text-lg px-8 py-6 w-full sm:w-auto"
                 asChild
               >
-                <a href="tel:+542916482826" className="flex items-center gap-2">
+                <a href="tel:+542916481220" className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
                   Llamar Ahora
                 </a>
@@ -159,7 +159,7 @@ export default function AmparosDeSaludPage() {
               <div className="p-6 bg-background/60 rounded-lg border-2">
                 <h3 className="font-sans text-xl font-bold text-foreground mb-2">Estudio Jurídico Mazzarini-Gatti</h3>
                 <p className="text-sm text-muted-foreground">Berutti 323, Bahia Blanca, Provincia de Buenos Aires</p>
-                <p className="text-sm text-muted-foreground">Tel: <a href="tel:+54 9 291 648-2826" className="text-primary">+54 9 291 648-2826</a></p>
+                <p className="text-sm text-muted-foreground">Tel: <a href="tel:+54 9 291 648-1220" className="text-primary">+54 9 291 648 1220</a></p>
               </div>
 
               <div>
@@ -347,7 +347,7 @@ export default function AmparosDeSaludPage() {
                 asChild
               >
                 <a 
-                  href="https://wa.me/542916482826?text=Hola%2C%20necesito%20consultar%20por%20un%20amparo%20de%20salud" 
+                  href="https://wa.me/542916481220?text=Hola%2C%20necesito%20consultar%20por%20un%20amparo%20de%20salud" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"
