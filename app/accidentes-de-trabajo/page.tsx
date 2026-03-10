@@ -154,7 +154,7 @@ export default function AccidentesDeTrabajoPage() {
                 asChild
               >
                 <a 
-                  href="https://wa.me/5492915041220?text=Hola%2C%20necesito%20consultar%20por%20un%20accidente%20de%20trabajo" 
+                  href="https://wa.me/5492916482826?text=Hola%2C%20necesito%20consultar%20por%20un%20accidente%20de%20trabajo" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-3"
@@ -441,7 +441,7 @@ export default function AccidentesDeTrabajoPage() {
                 asChild
               >
                 <a 
-                  href="https://wa.me/5492915041220?text=Hola%2C%20necesito%20consultar%20por%20un%20accidente%20de%20trabajo" 
+                  href="https://wa.me/5492916482826?text=Hola%2C%20necesito%20consultar%20por%20un%20accidente%20de%20trabajo" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"

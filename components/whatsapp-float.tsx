@@ -9,7 +9,7 @@ export function WhatsAppFloat() {
   
   // Configuración según la página actual
   const isAccidentesPage = pathname === "/accidentes-de-trabajo"
-  const phoneNumber = isAccidentesPage ? "5492915041220" : "542916482826"
+  const phoneNumber = isAccidentesPage ?  "542916482826" : "542916481220"
   const message = encodeURIComponent(
     isAccidentesPage 
       ? "Hola, necesito consultar por un accidente de trabajo" 
