@@ -4,10 +4,12 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20)
@@ -25,6 +27,13 @@ export function Navbar() {
 
   const navBg = isScrolled ? "bg-background/95 backdrop-blur-sm border-b border-border" : "bg-transparent"
   const navClassName = "fixed top-0 left-0 right-0 z-50 transition-all duration-300 " + navBg
+  const isSucesionesPage = pathname === "/sucesiones-y-derecho-inmobiliario"
+  const isAccidentesPage = pathname === "/accidentes-de-trabajo"
+  const logoSubtitle = isSucesionesPage
+    ? "SUCESIONES Y DERECHO INMOBILIARIO"
+    : isAccidentesPage
+      ? "ACCIDENTES DE TRABAJO"
+      : "AMPAROS DE SALUD"
 
   return (
     <nav className={navClassName}>
@@ -37,7 +46,7 @@ export function Navbar() {
             </div>
             <div className="hidden sm:block">
               <div className="font-sans text-lg md:text-xl font-semibold text-foreground leading-tight">Mazzarini & Gatti</div>
-              <div className="text-xs md:text-sm text-muted-foreground tracking-wider">AMPAROS DE SALUD</div>
+              <div className="text-xs md:text-sm text-muted-foreground tracking-wider">{logoSubtitle}</div>
             </div>
           </Link>
 
@@ -49,17 +58,18 @@ export function Navbar() {
 
             <Button
               asChild
-              className="relative inline-flex items-center gap-2 text-sm font-semibold text-white hover:opacity-95 transition-all bg-orange-600 hover:bg-orange-700"
+              className="relative inline-flex items-center gap-2 text-sm font-semibold text-white hover:opacity-95 transition-all bg-sky-900 hover:bg-sky-800"
               style={{ padding: "0.5rem 0.75rem" }}
             >
-              <Link href="/accidentes-de-trabajo" aria-label="Accidentes de Trabajo">
-                Accidentes de Trabajo
-                <span className="absolute -top-2 -right-2 flex h-5 w-5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-5 w-5 bg-green-300"></span>
-                </span>
+              <Link href="/sucesiones-y-derecho-inmobiliario" aria-label="Sucesiones y Derecho Inmobiliario">
+                Sucesiones y Derecho Inmobiliario
+                <span className="absolute -top-2 -right-2 inline-flex h-2.5 w-2.5 rounded-full bg-amber-300" />
               </Link>
             </Button>
+
+            <Link href="/accidentes-de-trabajo" className="text-sm text-foreground hover:text-primary transition-colors">
+              Accidentes de Trabajo
+            </Link>
 
             <Link href="/otros-servicios" className="text-sm text-foreground hover:text-primary transition-colors">
               Otros Servicios
@@ -83,13 +93,17 @@ export function Navbar() {
 
               <Button
                 asChild
-                className="w-full text-left px-4 py-2 font-semibold text-white inline-flex items-center gap-2 justify-between bg-orange-600 hover:bg-orange-700"
+                className="w-full text-left px-4 py-2 font-semibold text-white inline-flex items-center gap-2 justify-between bg-sky-900 hover:bg-sky-800"
               >
-                <Link href="/accidentes-de-trabajo" onClick={() => setIsMobileMenuOpen(false)} aria-label="Accidentes de Trabajo">
-                  <span>Accidentes de Trabajo</span>
-                  <span className="inline-flex h-2 w-2 rounded-full bg-green-500" />
+                <Link href="/sucesiones-y-derecho-inmobiliario" onClick={() => setIsMobileMenuOpen(false)} aria-label="Sucesiones y Derecho Inmobiliario">
+                  <span>Sucesiones y Derecho Inmobiliario</span>
+                  <span className="inline-flex h-2 w-2 rounded-full bg-amber-300" />
                 </Link>
               </Button>
+
+              <Link href="/accidentes-de-trabajo" className="text-left px-4 py-2 text-foreground hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+                Accidentes de Trabajo
+              </Link>
 
               <Link href="/otros-servicios" className="text-left px-4 py-2 text-foreground hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
                 Otros Servicios
