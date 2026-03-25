@@ -6,8 +6,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { TestimonialsCarousel } from "@/components/testimonials-carousel"
+import { WhatsAppForm } from "@/components/whatsapp-form"
 import { MessageCircle, Phone, CheckCircle, Home, Users, Scale, MapPin } from "lucide-react"
-
+import Image from "next/image"
 export const metadata: Metadata = {
   title: "Sucesiones y Derecho Inmobiliario — MG Abogados Bahía Blanca",
   description:
@@ -71,10 +72,18 @@ export default function SucesionesInmobiliarioPage() {
     <main className="min-h-screen bg-[#F5F7FA] text-[#1A1A1A]">
       <Navbar />
 
-      <section className="pt-24 md:pt-32 pb-14 md:pb-20 bg-[#F5F7FA]">
-        <div className="container mx-auto px-4">
+      <section className="relative min-h-[100svh] pt-24 md:pt-32 pb-14 md:pb-20 overflow-hidden flex items-center">
+        <Image
+          src="/suc.jpg"
+          alt="Abogados especializados en sucesiones y derecho inmobiliario"
+          fill
+          className="absolute top-0 left-0 w-full h-full object-cover opacity-60"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0B3C5D]/10 via-[#F5F7FA]/90 to-[#F5F7FA]" />
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#F5F7FA] to-transparent" />
+        <div className="relative z-10 container mx-auto px-4 w-full">
           <div className="max-w-5xl mx-auto">
-            <div className="flex justify-end mb-6">
+            <div className="flex justify-center mb-6">
               <p className="text-xs md:text-sm font-semibold tracking-wide uppercase text-[#0B3C5D] border border-[#0B3C5D]/20 bg-white/80 rounded-full px-4 py-2">
                 Sucesiones y derecho Inmobiliario
               </p>
@@ -196,6 +205,111 @@ export default function SucesionesInmobiliarioPage() {
         </div>
       </section>
 
+      <section id="contacto" className="py-12 md:py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="font-sans text-3xl md:text-4xl font-bold text-[#0B3C5D] mb-4">Consultá tu caso hoy</h2>
+              <p className="text-lg text-[#333333]">Sabemos que estos temas no pueden esperar. Completá el formulario y te respondemos a la brevedad.</p>
+            </div>
+
+            <Card className="border-2 border-[#0B3C5D]/15">
+              <CardContent className="p-8">
+                <WhatsAppForm
+                  className="space-y-6"
+                  phoneNumber="5492916482826"
+                  phoneMap={{
+                    gatti: "5492916482826",
+                    mazzarini: "5492915041220",
+                  }}
+                  intro="Hola, me interesa consultar sobre Sucesiones y Derecho Inmobiliario"
+                  fieldLabels={{
+                    nombre: "Nombre",
+                    email: "Email",
+                    telefono: "Telefono",
+                    abogado: "Abogado",
+                    consulta: "Consulta",
+                  }}
+                >
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label htmlFor="nombre" className="text-sm font-medium text-[#1A1A1A]">
+                        Nombre y Apellido *
+                      </label>
+                      <Input id="nombre" name="nombre" type="text" placeholder="Juan Pérez" required className="h-12" />
+                    </div>
+
+                    <div className="space-y-2">
+                      <label htmlFor="telefono" className="text-sm font-medium text-[#1A1A1A]">
+                        Teléfono *
+                      </label>
+                      <Input id="telefono" name="telefono" type="tel" placeholder="291 400 0000" required className="h-12" />
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label htmlFor="email" className="text-sm font-medium text-[#1A1A1A]">
+                      Email *
+                    </label>
+                    <Input id="email" name="email" type="email" placeholder="tu@email.com" required className="h-12" />
+                  </div>
+
+                  <div className="space-y-2">
+                    <label htmlFor="abogado" className="text-sm font-medium text-[#1A1A1A]">
+                      Elegi con quien queres hablar *
+                    </label>
+                    <select
+                      id="abogado"
+                      name="abogado"
+                      required
+                      defaultValue=""
+                      className="h-12 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    >
+                      <option value="" disabled>
+                        Seleccionar abogado
+                      </option>
+                      <option value="gatti">Agustin Gatti</option>
+                      <option value="mazzarini">Agustin Mazzarini</option>
+                    </select>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label htmlFor="consulta" className="text-sm font-medium text-[#1A1A1A]">
+                      Contanos tu caso *
+                    </label>
+                    <Textarea
+                      id="consulta"
+                      name="consulta"
+                      placeholder="Describí brevemente tu situación sucesoria o inmobiliaria"
+                      required
+                      className="min-h-32"
+                    />
+                  </div>
+
+                  <Button type="submit" size="lg" className="w-full text-lg py-6 bg-[#0B3C5D] hover:bg-[#1E3A5F]">
+                    Enviar por WhatsApp
+                  </Button>
+
+                  <p className="text-sm text-[#333333] text-center">Completá el formulario y te redirijiremos a WhatsApp</p>
+                </WhatsAppForm>
+              </CardContent>
+            </Card>
+
+           
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-16 bg-[#F5F7FA]">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto text-center">
+            <h2 className="font-sans text-3xl md:text-4xl font-bold text-[#0B3C5D] mb-3">Opiniones de clientes</h2>
+            <p className="text-[#333333] mb-8">Experiencias reales de personas que confiaron en nuestro estudio.</p>
+            <TestimonialsCarousel items={opiniones} />
+          </div>
+        </div>
+      </section>
+
       <section className="py-8 md:py-16 bg-white">
         <h2 className="font-sans text-3xl md:text-4xl font-bold text-[#0B3C5D] mb-6 text-center">Nuestro despacho</h2>
         <div className="container mx-auto mt-4 px-4">
@@ -232,99 +346,6 @@ export default function SucesionesInmobiliarioPage() {
                   aria-label="Ver en Google Maps"
                 >
                   Conocé nuestro despacho
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 md:py-16 bg-[#F5F7FA]">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto text-center">
-            <h2 className="font-sans text-3xl md:text-4xl font-bold text-[#0B3C5D] mb-3">Opiniones de clientes</h2>
-            <p className="text-[#333333] mb-8">Experiencias reales de personas que confiaron en nuestro estudio.</p>
-            <TestimonialsCarousel items={opiniones} />
-          </div>
-        </div>
-      </section>
-
-      <section id="contacto" className="py-12 md:py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto">
-            <div className="text-center mb-10">
-              <h2 className="font-sans text-3xl md:text-4xl font-bold text-[#0B3C5D] mb-4">Consultá tu caso hoy</h2>
-              <p className="text-lg text-[#333333]">Sabemos que estos temas no pueden esperar. Completá el formulario y te respondemos a la brevedad.</p>
-            </div>
-
-            <Card className="border-2 border-[#0B3C5D]/15">
-              <CardContent className="p-8">
-                <form className="space-y-6" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label htmlFor="nombre" className="text-sm font-medium text-[#1A1A1A]">
-                        Nombre y Apellido *
-                      </label>
-                      <Input id="nombre" name="nombre" type="text" placeholder="Juan Pérez" required className="h-12" />
-                    </div>
-
-                    <div className="space-y-2">
-                      <label htmlFor="telefono" className="text-sm font-medium text-[#1A1A1A]">
-                        Teléfono *
-                      </label>
-                      <Input id="telefono" name="telefono" type="tel" placeholder="291 400 0000" required className="h-12" />
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium text-[#1A1A1A]">
-                      Email *
-                    </label>
-                    <Input id="email" name="email" type="email" placeholder="tu@email.com" required className="h-12" />
-                  </div>
-
-                  <div className="space-y-2">
-                    <label htmlFor="consulta" className="text-sm font-medium text-[#1A1A1A]">
-                      Contanos tu caso *
-                    </label>
-                    <Textarea
-                      id="consulta"
-                      name="consulta"
-                      placeholder="Describí brevemente tu situación sucesoria o inmobiliaria"
-                      required
-                      className="min-h-32"
-                    />
-                  </div>
-
-                  <input type="hidden" name="_subject" value="Nueva consulta - Sucesiones y Derecho Inmobiliario" />
-                  <input type="hidden" name="_next" value="https://www.mglegales.com/gracias" />
-
-                  <Button type="submit" size="lg" className="w-full text-lg py-6 bg-[#0B3C5D] hover:bg-[#1E3A5F]">
-                    Enviar Consulta
-                  </Button>
-
-                  <p className="text-sm text-[#333333] text-center">Tus datos están protegidos. Atención en Bahía Blanca, Tornquist y la zona.</p>
-                </form>
-              </CardContent>
-            </Card>
-
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="flex-1 text-lg bg-[#0B3C5D] hover:bg-[#1E3A5F]" asChild>
-                <a
-                  href="https://wa.me/5492916482826?text=Hola%2C%20quiero%20consultar%20por%20sucesiones%20y%20derecho%20inmobiliario"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  Consultar por WhatsApp
-                </a>
-              </Button>
-
-              <Button size="lg" variant="outline" className="flex-1 text-lg border-2 border-[#0B3C5D] text-[#0B3C5D] hover:bg-[#0B3C5D]/5" asChild>
-                <a href="tel:+542916482826" className="flex items-center gap-2">
-                  <Phone className="w-5 h-5" />
-                  Llamar ahora
                 </a>
               </Button>
             </div>

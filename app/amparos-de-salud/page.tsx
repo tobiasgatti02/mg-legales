@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { WhatsAppForm } from "@/components/whatsapp-form"
 import { Shield, Clock, Award, Phone, MessageCircle, CheckCircle } from "lucide-react"
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
 
@@ -248,7 +249,23 @@ export default function AmparosDeSaludPage() {
 
             <Card className="border-2">
               <CardContent className="p-8">
-                <form className="space-y-6" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <WhatsAppForm
+                  className="space-y-6"
+                  phoneNumber="5492915041220"
+                  phoneMap={{
+                    gatti: "5492916482826",
+                    mazzarini: "5492915041220",
+                  }}
+                  intro="Hola, me interesa consultar sobre un Amparo de Salud"
+                  fieldLabels={{
+                    nombre: "Nombre",
+                    email: "Email",
+                    telefono: "Telefono",
+                    obraSocial: "Obra Social/Prepaga",
+                    abogado: "Abogado",
+                    consulta: "Consulta",
+                  }}
+                >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label htmlFor="nombre" className="text-sm font-medium text-foreground">
@@ -308,6 +325,25 @@ export default function AmparosDeSaludPage() {
                   </div>
 
                   <div className="space-y-2">
+                    <label htmlFor="abogado" className="text-sm font-medium text-foreground">
+                      Elegi con quien queres hablar *
+                    </label>
+                    <select
+                      id="abogado"
+                      name="abogado"
+                      required
+                      defaultValue=""
+                      className="h-12 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    >
+                      <option value="" disabled>
+                        Seleccionar abogado
+                      </option>
+                      <option value="gatti">Agustin Gatti</option>
+                      <option value="mazzarini">Agustin Mazzarini</option>
+                    </select>
+                  </div>
+
+                  <div className="space-y-2">
                     <label htmlFor="consulta" className="text-sm font-medium text-foreground">
                       Contanos tu caso *
                     </label>
@@ -320,40 +356,38 @@ export default function AmparosDeSaludPage() {
                     />
                   </div>
 
-                  <input type="hidden" name="_subject" value="Nueva consulta - Amparo de Salud" />
-                  <input type="hidden" name="_next" value="https://www.mglegales.com/gracias" />
-
                   <Button 
                     type="submit" 
                     size="lg" 
                     className="w-full text-lg py-6"
                   >
-                    Enviar Consulta
+                    Enviar por WhatsApp
                   </Button>
 
                   <p className="text-sm text-muted-foreground text-center">
-                    Tus datos están protegidos. Te contactaremos a la brevedad.
+                    Completá el formulario y te redirijiremos a WhatsApp
                   </p>
-                </form>
+                </WhatsAppForm>
               </CardContent>
             </Card>
 
-            {/* CTA Adicional WhatsApp */}
-            <div className="mt-8 text-center">
-              <p className="text-muted-foreground mb-4">¿Preferís una respuesta más rápida?</p>
-              <Button 
-                size="lg" 
-                className="text-lg px-8"
-                asChild
-              >
+            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+              <Button size="lg" className="flex-1 text-lg" asChild>
                 <a 
-                  href="https://wa.me/542915041220?text=Hola%2C%20necesito%20consultar%20por%20un%20amparo%20de%20salud" 
+                  href="https://wa.me/5492915041220?text=Hola%2C%20necesito%20consultar%20sobre%20un%20amparo%20de%20salud" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"
                 >
                   <MessageCircle className="w-5 h-5" />
-                  Escribínos por WhatsApp
+                  WhatsApp - Agustín Mazzarini
+                </a>
+              </Button>
+
+              <Button size="lg" variant="outline" className="flex-1 text-lg" asChild>
+                <a href="tel:+5492915041220" className="flex items-center gap-2">
+                  <Phone className="w-5 h-5" />
+                  Llamar ahora
                 </a>
               </Button>
             </div>
