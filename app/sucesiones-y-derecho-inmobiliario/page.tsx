@@ -91,7 +91,7 @@ export default function SucesionesInmobiliarioPage() {
 
             <div className="text-center">
               <h1 className="font-sans text-4xl md:text-6xl font-bold text-[#0B3C5D] mb-4 text-balance">
-                Abogado Derecho Inmobiliario y Sucesiones en Bahía Blanca
+                Abogado Sucesiones y Derecho Inmobiliario
               </h1>
               <p className="text-xl md:text-2xl font-semibold text-[#1A1A1A] mb-6">
                 Resolvé tu situación legal de forma rápida y segura

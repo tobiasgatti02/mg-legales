@@ -8,7 +8,6 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { MessageCircle, Phone, Mail, MapPin } from "lucide-react"
 import { useState } from "react"
-import emailjs from '@emailjs/browser'
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -43,7 +42,6 @@ export function ContactSection() {
         to_email: 'estudiomglegales@gmail.com',
       }
 
-      await emailjs.send(serviceId, templateId, templateParams, publicKey)
 
       setSubmitMessage("¡Consulta enviada exitosamente!")
       setFormData({ name: "", email: "", phone: "", message: "" })
