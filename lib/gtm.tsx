@@ -1,5 +1,11 @@
 import Script from 'next/script'
 
+declare global {
+  interface Window {
+    dataLayer?: Array<Record<string, unknown>>
+  }
+}
+
 export function GoogleTagManager() {
   const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID
   
@@ -46,9 +52,9 @@ export function GoogleTagManagerNoScript() {
 }
 
 // Helper para enviar eventos de conversión
-export const trackConversion = (eventName: string, eventData = {}) => {
-  if (typeof window !== 'undefined' && (window as any).dataLayer) {
-    (window as any).dataLayer.push({
+export const trackConversion = (eventName: string, eventData: Record<string, unknown> = {}) => {
+  if (typeof window !== 'undefined' && window.dataLayer) {
+    window.dataLayer.push({
       event: eventName,
       ...eventData,
     })
