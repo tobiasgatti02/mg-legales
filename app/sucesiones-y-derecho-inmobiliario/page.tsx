@@ -52,6 +52,7 @@ const motivos = [
   "Experiencia en casos reales en Bahía Blanca, Tornquist y la zona",
   "Estrategias claras desde el inicio",
   "Enfoque práctico: soluciones concretas sin vueltas",
+  "Honorarios y costos claros",
 ]
 
 const opiniones = [
@@ -187,6 +188,23 @@ export default function SucesionesInmobiliarioPage() {
       <section className="py-12 md:py-16 bg-[#F5F7FA]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
+            <div className="mb-12 flex justify-center">
+              <Button
+                size="lg"
+                className="text-lg px-8 py-6 bg-[#0B3C5D] hover:bg-[#1E3A5F]"
+                asChild
+              >
+                <a
+                  href="https://wa.me/5492916482826?text=Hola%2C%20quiero%20consultar%20por%20sucesiones%20y%20derecho%20inmobiliario"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  Consultar por WhatsApp
+                </a>
+              </Button>
+            </div>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0B3C5D]/10 mb-4">
               <Scale className="w-5 h-5 text-[#0B3C5D]" />
               <span className="text-sm font-semibold text-[#0B3C5D]">Por qué elegir este servicio</span>
