@@ -20,8 +20,11 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Abogados Bahia Blanca - Amparos de Salud",
-  description: "Defensa de derecho de salud Bahia Blanca. Defendemos tu derecho a la salud con profesionalismo y dedicación.",
+  title: {
+    default: "Abogados Bahia Blanca - MG Legales",
+    template: "%s",
+  },
+  description: "Estudio jurídico en Bahía Blanca. Amparos de salud, accidentes de trabajo ART, sucesiones y derecho inmobiliario.",
 }
 
 export default function RootLayout({

@@ -12,10 +12,10 @@ import { Shield, Clock, AlertTriangle, Phone, MessageCircle, CheckCircle, HardHa
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
 
 export const metadata: Metadata = {
-  title: "Accidentes de Trabajo (ART) — MG Abogados Bahía Blanca | Reclamos y demandas laborales",
+  title: "Abogados Bahia Blanca - Accidente de Trabajo ART",
   description: "Abogados especializados en accidentes de trabajo y reclamos a ART en Bahía Blanca. Defendemos tus derechos ante incapacidades, enfermedades profesionales y divergencias. Consulta gratuita.",
   openGraph: {
-    title: "Accidentes de Trabajo (ART) — MG Abogados Bahía Blanca",
+    title: "Abogados Bahia Blanca - Accidente de Trabajo ART",
     description: "Abogados especializados en reclamos a ART. Defendemos tus derechos por accidentes laborales e incapacidades.",
     type: "website",
     url: "https://www.mglegales.com/accidentes-de-trabajo",
